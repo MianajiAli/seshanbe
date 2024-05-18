@@ -1,0 +1,54 @@
+.signs-wrapper {
+    @apply w-[20rem] flex flex-row justify-center gap-3 items-center;
+
+}
+.logo-wrapper {
+    @apply w-[20rem] flex flex-row justify-center gap-3 items-center pb-20 md:pb-0 font-sbold;
+
+}
+.item {
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.item:first-child {
+    filter: drop-shadow(0 0 25px rgb(228, 172, 37, 1));
+}
+
+.item:nth-child(2) {
+    filter: drop-shadow(0 0 30px rgb(35, 135, 255));
+}
+
+.item:nth-child(3) {
+    filter: drop-shadow(0 0 30px rgba(255, 233, 0, .4));
+}
+
+.footer {
+    @apply w-full min-h-[200px] bg-c-back2 text-c-text3 flex justify-between items-center gap-5 select-none
+    md:flex-row flex-col;
+    background: linear-gradient(0deg, rgba(32, 30, 19, .5) 0%, rgba(20, 18, 12, .5) 23%, rgba(10, 9, 6, .5) 48%, rgba(4, 4, 3, .5) 71%, rgba(0, 0, 0, .5) 100%);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.social {
+    @apply bg-c-scnd border-c-text3 text-c-text3;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+}
+
+.social:hover {
+    @apply bg-c-prim border-c-scnd text-c-scnd;
+    filter: drop-shadow(0 0 25px rgb(228, 172, 37, 1));
+}
