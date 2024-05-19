@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Counter = (props) => {
-  const { title, count, id, onRemove, onInc, onDec, color, price } = props;
+  const { title, count, id, onRemove, onInc, onDec, color, price,imageUrl } = props;
 
   const handleIncrement = () => {
     onInc(id);
@@ -18,12 +18,12 @@ const Counter = (props) => {
   return (
     <div className="border rounded-md p-4 mb-4 flex items-center justify-between">
       <img
-        src={`/giftcards/${id}.png`}
-        alt={`Gift Card ${id}`}
-        className="w-20 h-20 object-contain mr-4"
+        src={imageUrl}
+        alt={title}
+        className="w-40 h-20 object-contain mr-4"
       />
       <div className="flex flex-col gap-3" dir='rtl'>
-        <h2 className="text-lg font-bold mb-2">{title || 'NoTitle'}</h2>
+        <h2 className="text-lg font-bl mb-2">{title || 'NoTitle'}</h2>
         <div className='flex flex-row gap-10'>
 
           <p className="text-gray-600 mb-2">{color || 'NoColor'}</p>

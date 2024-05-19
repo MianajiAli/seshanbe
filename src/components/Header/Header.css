@@ -1,0 +1,30 @@
+/* Header.css */
+
+.fixedHeader {
+    @apply fixed z-[99] w-full h-min bg-c-back2 border-c-text3;
+    border-bottom: #4A4A4B 1px solid;
+}
+
+.headerContainer {
+    @apply mx-auto w-[90%] h-[70px] flex justify-between items-center text-xl font-yekan font-sb;
+}
+
+.logo {
+    @apply font-bl text-3xl text-c-text1;
+}
+
+.logo b {
+    @apply font-eb text-3xl text-c-prim;
+}
+
+.nav-links {
+    @apply w-[400px] flex flex-row-reverse items-center justify-between ;
+}
+.nav-links a{
+    @apply text-c-text2;
+    transition:all 500ms ease-in-out;
+}
+.nav-links a:hover {
+    @apply text-c-text1;
+    transition:all 250ms ease-in-out;
+}

@@ -76,6 +76,7 @@ const Counters = () => {
           count={item.count}
           color={item.color}
           price={item.price}
+          imageUrl={item.imageUrl}
           onRemove={() => del(item.id)}
           onInc={() => inc(item.id)}
           onDec={() => dec(item.id)}

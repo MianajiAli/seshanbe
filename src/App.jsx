@@ -11,9 +11,11 @@ import NoPage from './components/NoPage/NoPage.jsx'; // Assuming you have a NoPa
 function Layout() {
   return (
       // #8A2DFC
-    <div className='bg-[#141416] min-h-screen text-white'>
+    <div className='bg-c-back2 min-h-screen text-white'>
       <Header />
+      <div className='pt-20 w-[90%] mx-auto '>
       <Outlet /> {/* This will render the matched child route */}
+      </div>
       <Footer />
     </div>
   );
