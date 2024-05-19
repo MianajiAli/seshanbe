@@ -1,16 +1,35 @@
-import React from 'react'
-import Header from './components/Header/Header'
-import Counters from './components/Counters/Counters'
+// App.jsx
+import React from 'react';
+import { BrowserRouter, Routes, Route,Outlet } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Counters from './components/Counters/Counters';
 import Footer from './components/Footer/Footer';
+import Shop from './components/Shop/Shop';
+import SingleProduct from './components/SingleProduct/SingleProduct';
+import NoPage from './components/NoPage/NoPage.jsx'; // Assuming you have a NoPage component for 404
 
-const App = () => {
+function Layout() {
   return (
-    <div className='bg-black min-h-screen text-white flex flex-col justify-between'>
+      // #8A2DFC
+    <div className='bg-[#141416] min-h-screen text-white'>
       <Header />
-      <Counters />
+      <Outlet /> {/* This will render the matched child route */}
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Counters />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="product/:id" element={<SingleProduct />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}

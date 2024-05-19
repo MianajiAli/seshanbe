@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const Counter = ({ title, count, id, onRemove, onInc, onDec, color, price }) => {
-  const [itemCount, setItemCount] = useState(count);
-
-  useEffect(() => {
-    setItemCount(count);
-  }, [count]);
+const Counter = (props) => {
+  const { title, count, id, onRemove, onInc, onDec, color, price } = props;
 
   const handleIncrement = () => {
     onInc(id);
@@ -20,29 +16,42 @@ const Counter = ({ title, count, id, onRemove, onInc, onDec, color, price }) => 
   };
 
   return (
-    <div className="select-none w-min my-5 px-20 h-20 mx-auto items-center gap-5 justify-center flex text-xl font-bold rounded-md border-[1.5px] border-red-50 border-solid">
-      <span className="min-w-[20rem] w-max h-10 text-center flex justify-center items-center">{title || 'NoTitle'}</span>
-      <span>{color || 'NoColor'}</span>
-      <span>{price || 'NoPrice'}</span>
-      <button
-        className="hover:bg-stone-900 text-white h-10 w-10 text-center flex justify-center items-center rounded-md border-[1.5px] border-red-50 border-solid"
-        onClick={handleDecrement}
-      >
-        -
-      </button>
-      <span className="min-w-10 h-10 text-center flex justify-center items-center rounded-md border-[1.5px] border-red-50 border-solid">{itemCount}</span>
-      <button
-        className="hover:bg-stone-900 text-white h-10 w-10 text-center flex justify-center items-center rounded-md border-[1.5px] border-red-50 border-solid"
-        onClick={handleIncrement}
-      >
-        +
-      </button>
-      <button
-        className="hover:bg-stone-900 text-white h-10 w-10 text-center flex justify-center items-center rounded-md border-[1.5px] border-red-50 border-solid"
-        onClick={handleRemove}
-      >
-        x
-      </button>
+    <div className="border rounded-md p-4 mb-4 flex items-center justify-between">
+      <img
+        src={`/giftcards/${id}.png`}
+        alt={`Gift Card ${id}`}
+        className="w-20 h-20 object-contain mr-4"
+      />
+      <div className="flex flex-col gap-3" dir='rtl'>
+        <h2 className="text-lg font-bold mb-2">{title || 'NoTitle'}</h2>
+        <div className='flex flex-row gap-10'>
+
+          <p className="text-gray-600 mb-2">{color || 'NoColor'}</p>
+          <p className="text-gray-600 mb-2">{price || 'NoPrice'}$</p>
+        </div>
+        <div className="flex items-center">
+          <button
+            onClick={handleDecrement}
+            className="bg-gray-200 text-gray-700 px-2 py-1 rounded mr-2"
+          >
+            -
+          </button>
+          <span className="mr-2">{count || "No0"}</span>
+          <button
+            onClick={handleIncrement}
+            className="bg-gray-200 text-gray-700 px-2 py-1 rounded mr-2"
+          >
+            +
+          </button>
+          <button
+            onClick={handleRemove}
+            className="bg-red-500 text-white px-2 py-1 rounded"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+
     </div>
   );
 };

@@ -1,44 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Counter from './../Counter/Counter';
 
 const Counters = () => {
-  const [sabad, setSabad] = useState([
-    { id: 1, title: 'گیفت کارت استیم', count: 5, color: 'red', price: 200 },
-    { id: 2, title: 'گیفت کارت ایکس باکس', count: 10, color: 'green', price: 150 },
-    { id: 3, title: 'گیفت کارت پلی استیشن', count: 7, color: 'blue', price: 250 },
-    { id: 4, title: 'گیفت کارت آیتونز', count: 12, color: 'yellow', price: 100 },
-    { id: 5, title: 'گیفت کارت گوگل پلی', count: 9, color: 'purple', price: 180 },
-    { id: 6, title: 'گیفت کارت آمازون', count: 15, color: 'orange', price: 220 },
-    { id: 7, title: 'گیفت کارت نتفلیکس', count: 8, color: 'black', price: 190 },
-    { id: 8, title: 'گیفت کارت اسپاتیفای', count: 6, color: 'white', price: 170 },
-    { id: 9, title: 'گیفت کارت والمارت', count: 11, color: 'pink', price: 130 },
-    { id: 10, title: 'گیفت کارت ای بی', count: 5, color: 'grey', price: 160 },
-    { id: 11, title: 'گیفت کارت زارا', count: 4, color: 'brown', price: 140 },
-  ]);
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/cart')
+      .then(response => response.json())
+      .then(data => setCart(data));
+  }, []);
 
   const inc = (id) => {
-    const updatedSabad = sabad.map(item =>
-      item.id === id ? { ...item, count: item.count + 1 } : item
-    );
-    setSabad(updatedSabad);
+    const updatedItem = cart.find(item => item.id === id);
+    if (!updatedItem) return;
+
+    const updatedCount = updatedItem.count + 1;
+    fetch(`http://localhost:3001/cart/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ count: updatedCount }),
+    })
+      .then(response => response.json())
+      .then(() => {
+        const updatedCart = cart.map(item =>
+          item.id === id ? { ...item, count: updatedCount } : item
+        );
+        setCart(updatedCart);
+      })
+      .catch(error => console.error('Error updating count:', error));
   };
 
   const dec = (id) => {
-    const updatedSabad = sabad.map(item =>
-      item.id === id ? { ...item, count: item.count > 1 ? item.count - 1 : 1 } : item
-    );
-    setSabad(updatedSabad);
+    const updatedItem = cart.find(item => item.id === id);
+    if (!updatedItem) return;
+
+    const updatedCount = updatedItem.count > 1 ? updatedItem.count - 1 : 1;
+    fetch(`http://localhost:3001/cart/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ count: updatedCount }),
+    })
+      .then(response => response.json())
+      .then(() => {
+        const updatedCart = cart.map(item =>
+          item.id === id ? { ...item, count: updatedCount } : item
+        );
+        setCart(updatedCart);
+      })
+      .catch(error => console.error('Error updating count:', error));
   };
 
   const del = (idToRemove) => {
-    const updatedSabad = sabad.filter(item => item.id !== idToRemove);
-    setSabad(updatedSabad);
-    console.log("Removed item with id:", idToRemove);
+    fetch(`http://localhost:3001/cart/${idToRemove}`, {
+      method: 'DELETE'
+    })
+      .then(() => {
+        const updatedCart = cart.filter(item => item.id !== idToRemove);
+        setCart(updatedCart);
+        console.log("Removed item with id:", idToRemove);
+      })
+      .catch(error => console.error('Error removing item:', error));
   };
 
   return (
-    <div>
-      {sabad.map((item) => (
+    <div className='w-[80%] max-w-[40rem] mx-auto'>
+      {cart.map((item) => (
         <Counter
           key={item.id}
           id={item.id}
