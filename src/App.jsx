@@ -27,6 +27,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Counters />} />
+          <Route path="cart" element={<Counters />} />
           <Route path="shop" element={<Shop />} />
           <Route path="product/:id" element={<SingleProduct />} />
           <Route path="*" element={<NoPage />} />

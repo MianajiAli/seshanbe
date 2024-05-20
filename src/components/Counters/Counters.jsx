@@ -5,7 +5,7 @@ const Counters = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/cart')
+    fetch('http://localhost:3001/carts')
       .then(response => response.json())
       .then(data => setCart(data));
   }, []);
@@ -15,7 +15,7 @@ const Counters = () => {
     if (!updatedItem) return;
 
     const updatedCount = updatedItem.count + 1;
-    fetch(`http://localhost:3001/cart/${id}`, {
+    fetch(`http://localhost:3001/carts/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const Counters = () => {
     if (!updatedItem) return;
 
     const updatedCount = updatedItem.count > 1 ? updatedItem.count - 1 : 1;
-    fetch(`http://localhost:3001/cart/${id}`, {
+    fetch(`http://localhost:3001/carts/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const Counters = () => {
   };
 
   const del = (idToRemove) => {
-    fetch(`http://localhost:3001/cart/${idToRemove}`, {
+    fetch(`http://localhost:3001/carts/${idToRemove}`, {
       method: 'DELETE'
     })
       .then(() => {

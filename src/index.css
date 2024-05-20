@@ -4,62 +4,131 @@
 
 /* index.css */
 @font-face {
-     font-family: 'YekanBakh';
-     font-weight: 900;
-     src: url('./assets/fonts/yekan/YekanBakh-ExtraBlack.woff2') format('woff2'),
-          url('./assets/fonts/yekan/YekanBakh-ExtraBlack.woff') format('woff');
- }
- 
- @font-face {
-     font-family: 'YekanBakh';
-     font-weight: 800;
-     src: url('./assets/fonts/yekan/YekanBakh-ExtraBold.woff2') format('woff2'),
-          url('./assets/fonts/yekan/YekanBakh-ExtraBold.woff') format('woff');
- }
- 
- @font-face {
-     font-family: 'YekanBakh';
-     font-weight: 700;
-     src: url('./assets/fonts/yekan/YekanBakh-Bold.woff2') format('woff2'),
-          url('./assets/fonts/yekan/YekanBakh-Bold.woff') format('woff');
- }
- 
- @font-face {
-     font-family: 'YekanBakh';
-     font-weight: 600;
-     src: url('./assets/fonts/yekan/YekanBakh-SemiBold.woff2') format('woff2'),
-          url('./assets/fonts/yekan/YekanBakh-SemiBold.woff') format('woff');
- }
- 
- @font-face {
-     font-family: 'YekanBakh';
-     font-weight: 400;
-     src: url('./assets/fonts/yekan/YekanBakh-Regular.woff2') format('woff2'),
-          url('./assets/fonts/yekan/YekanBakh-Regular.woff') format('woff');
- }
- 
- @font-face {
-     font-family: 'YekanBakh';
-     font-weight: 300;
-     src: url('./assets/fonts/yekan/YekanBakh-Light.woff2') format('woff2'),
-          url('./assets/fonts/yekan/YekanBakh-Light.woff') format('woff');
- }
- 
- @font-face {
-     font-family: 'YekanBakh';
-     font-weight: 200;
-     src: url('./assets/fonts/yekan/YekanBakh-Thin.woff2') format('woff2'),
-          url('./assets/fonts/yekan/YekanBakh-Thin.woff') format('woff');
- }
- .btn-25{
-     @apply py-2 px-4  font-eb font-yekan rounded-md  opacity-80 hover:opacity-100 ;
- }
- .dropshadowPurple10:hover{
-     filter: drop-shadow(0 0px 10px #9d00ff);
- }
- .btn-round26{
-     @apply w-10 h-10  font-bl text-3xl font-yekan rounded-full  opacity-80 hover:opacity-100 ;
- }
- .smooth-300{
-     @apply   transition-all ease-in-out duration-300;
- }
+    font-family: 'YekanBakh';
+    font-weight: 900;
+    src: url('./assets/fonts/yekan/YekanBakh-ExtraBlack.woff2') format('woff2'),
+        url('./assets/fonts/yekan/YekanBakh-ExtraBlack.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    font-weight: 800;
+    src: url('./assets/fonts/yekan/YekanBakh-ExtraBold.woff2') format('woff2'),
+        url('./assets/fonts/yekan/YekanBakh-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    font-weight: 700;
+    src: url('./assets/fonts/yekan/YekanBakh-Bold.woff2') format('woff2'),
+        url('./assets/fonts/yekan/YekanBakh-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    font-weight: 600;
+    src: url('./assets/fonts/yekan/YekanBakh-SemiBold.woff2') format('woff2'),
+        url('./assets/fonts/yekan/YekanBakh-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    font-weight: 400;
+    src: url('./assets/fonts/yekan/YekanBakh-Regular.woff2') format('woff2'),
+        url('./assets/fonts/yekan/YekanBakh-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    font-weight: 300;
+    src: url('./assets/fonts/yekan/YekanBakh-Light.woff2') format('woff2'),
+        url('./assets/fonts/yekan/YekanBakh-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    font-weight: 200;
+    src: url('./assets/fonts/yekan/YekanBakh-Thin.woff2') format('woff2'),
+        url('./assets/fonts/yekan/YekanBakh-Thin.woff') format('woff');
+}
+
+.btn {
+    @apply text-c-text1 font-yekan font-bl;
+    align-items: center;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    backface-visibility: hidden;
+    background: transparent;
+    background-color: transparent;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: none;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer !important;
+    display: flex;
+    font-size: 16px;
+    gap: 6px;
+    height: 42px;
+    justify-content: center;
+    outline: none;
+    padding: 0 20px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(.175, .885, .32, 1.275);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: #9d00ff;
+    box-shadow: 0 4px 40px #9d00ff99;
+    border-color: rgb(var(--color-primary));
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0px 1px #9d00ff99;
+}
+
+.btn-round26 {
+    @apply w-10 h-10 font-bl text-3xl font-yekan rounded-full opacity-50 hover:opacity-70;
+}
+
+.smooth-300 {
+    transition: all 0.3s cubic-bezier(.175, .885, .32, 1.275);
+    
+}
+
+.card {
+    background: linear-gradient(to right bottom, #181b24,transparent);
+    border: 1px solid #292d39;
+}
+.card-control:hover{
+    background: linear-gradient(to right bottom, #181b24,rgba(166, 0, 255, 0.103));
+    border: 1px solid #292d39;
+}
+
+.card-control:hover .btn{
+    box-shadow: 0 0px 1px #9d00ff99;
+
+}
+.card-product:hover{
+
+    background: linear-gradient(to right bottom, #181b24,rgba(166, 0, 255, 0.103));
+    border: 1px solid #292d39;
+    transform: -20px;
+
+}
+.card-product:hover .btn{
+    box-shadow: 0 0px 1px #9d00ff99;
+
+}
+

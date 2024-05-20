@@ -27,11 +27,7 @@
   .quantity-buttons {
     @apply gap-2 flex flex-nowrap;
   }
-  
-  .add-to-cart-button {
-    @apply bg-c-prim flex-nowrap flex justify-center items-center text-center w-full md:w-fit mt-4 md:mt-0;
-    
-  }
+
   .input-field.invalid {
     border-color: red;
   }

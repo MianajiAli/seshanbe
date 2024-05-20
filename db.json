@@ -11,8 +11,7 @@
       "password": "password2"
     }
   ],
-  "carts": [
-  ],
+  "carts": [],
   "products": [
     {
       "id": "a1b2c3d4-5678-1234-9abc-def012345678",
