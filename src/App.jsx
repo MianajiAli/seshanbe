@@ -13,7 +13,7 @@ function Layout() {
       // #8A2DFC
     <div className='bg-c-back2 min-h-screen text-white'>
       <Header />
-      <div className='pt-20 w-[90%] mx-auto '>
+      <div className='pt-20 w-[90%] mx-auto  min-h-screen'>
       <Outlet /> {/* This will render the matched child route */}
       </div>
       <Footer />

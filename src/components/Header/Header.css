@@ -6,7 +6,7 @@
 }
 
 .headerContainer {
-    @apply mx-auto w-[90%] h-[70px] flex justify-between items-center text-xl font-yekan font-sb;
+    @apply mx-auto w-[90%] h-[70px] flex justify-between items-center text-sm sm:text-xl font-yekan font-sb;
 }
 
 .logo {
@@ -18,7 +18,7 @@
 }
 
 .nav-links {
-    @apply w-[400px] flex flex-row-reverse items-center justify-between ;
+    @apply w-[200px] sm:w-[400px] flex flex-row-reverse items-center justify-between ;
 }
 .nav-links a{
     @apply text-c-text2;
