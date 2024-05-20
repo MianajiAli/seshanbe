@@ -1,55 +1,17 @@
 {
-  "cart": [
+  "users": [
     {
-      "id": "b2c3d4e5-6789-2345-0abc-def123456789",
-      "title": "PlayStation Plus",
-      "count": 41,
-      "color": "blue",
-      "price": 550,
-      "description": "PlayStation Plus subscription",
-      "category": "Gaming",
-      "imageUrl": "path/to/playstation-plus.jpg"
+      "id": "1",
+      "username": "user1",
+      "password": "password1"
     },
     {
-      "id": "c3d4e5f6-7890-3456-1bcd-ef234567890a",
-      "title": "Amazon Gift Card",
-      "count": 100,
-      "color": "orange",
-      "price": 500,
-      "description": "Amazon gift card",
-      "category": "Retail",
-      "imageUrl": "path/to/amazon-gift-card.jpg"
-    },
-    {
-      "id": "d4e5f6g7-8901-4567-2cde-f3456789012b",
-      "title": "Starbucks Gift Card",
-      "count": 80,
-      "color": "brown",
-      "price": 450,
-      "description": "Starbucks gift card",
-      "category": "Food & Beverage",
-      "imageUrl": "path/to/starbucks-gift-card.jpg"
-    },
-    {
-      "id": "e5f6g7h8-9012-5678-3def-456789012345",
-      "title": "Netflix Gift Card",
-      "count": 60,
-      "color": "red",
-      "price": 700,
-      "description": "Netflix gift card",
-      "category": "Entertainment",
-      "imageUrl": "path/to/netflix-gift-card.jpg"
-    },
-    {
-      "id": "f6g7h8i9-0123-6789-4abc-567890123456",
-      "title": "iTunes Gift Card",
-      "count": 70,
-      "color": "purple",
-      "price": 550,
-      "description": "iTunes gift card",
-      "category": "Entertainment",
-      "imageUrl": "path/to/itunes-gift-card.jpg"
+      "id": "2",
+      "username": "user2",
+      "password": "password2"
     }
+  ],
+  "carts": [
   ],
   "products": [
     {

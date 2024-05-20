@@ -4,7 +4,7 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <div className='fixedHeader'>
+    <div className='fixedHeader select-none'>
       <div className='headerContainer'>
         <div>
           <Link to="/">
