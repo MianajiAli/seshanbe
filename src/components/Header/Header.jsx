@@ -11,12 +11,17 @@ const Header = () => {
             <span className='logo'>VANI<b>3</b>H</span>
           </Link>
         </div>
-        <div className='nav-links'>
+        <div className='nav-links '>
           <Link to="/shop">فروشگاه</Link>
           <Link to="/blog">وبلاگ</Link>
           <Link to="/about-us">درباره ما</Link>
           <Link to="/contact">تماس</Link>
         </div>
+      </div>
+      <div className='downHeader '>
+        <span className='smooth-300'>ثبت نام | ورود</span>
+        <Link className='smooth-300' to="/cart">سبد خرید</Link>
+
       </div>
     </div>
   );

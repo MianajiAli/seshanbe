@@ -22,8 +22,9 @@
   @apply select-none rounded-[11px];
   transition: 500ms ease-in-out;
 }
+
 .product-item img {
-  @apply bg-c-back3 w-[288px] h-[144px] font-yekan font-lg  text-c-text3 text-xl flex justify-center items-center rounded-[5px];
+  @apply bg-c-back3 w-[288px] h-[144px] font-yekan font-lg text-c-text3 text-xl flex justify-center items-center rounded-[5px];
 }
 
 .product-item .product-details {
@@ -40,9 +41,20 @@
   @apply font-yekan font-sb text-sm text-c-text3;
   transition: 300ms ease-in-out;
 }
-.product-item:hover h2,.product-item:hover p {
+
+.product-item:hover h2,
+.product-item:hover p {
   @apply text-c-text2;
   transition: 250ms ease-in-out;
 
 }
 
+.card-product:hover {
+  background: linear-gradient(to right bottom, #1f1e25, rgba(150, 0, 231, 0.2));
+  border: 1px solid #2c2f37;
+}
+
+.card-product:hover .btn {
+  box-shadow: 0 0px 1px #9d00ff99;
+
+}

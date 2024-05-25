@@ -1,14 +1,21 @@
 /* Header.css */
 
 .fixedHeader {
-    @apply fixed z-[99] w-full h-min bg-c-back2 border-c-text3;
-    border-bottom: #4A4A4B 1px solid;
+    @apply fixed z-[99] w-full h-min bg-c-back2 ;
 }
 
 .headerContainer {
-    @apply mx-auto w-[90%] h-[70px] flex justify-between items-center text-sm sm:text-xl font-yekan font-sb;
+    border-bottom: #4A4A4B 1px solid;
+    @apply mx-auto w-full px-[10%] h-[60px] flex justify-between items-center text-sm sm:text-xl font-yekan font-sb;
 }
-
+.downHeader{
+    border-bottom: #4A4A4B 1px solid;
+    @apply mx-auto w-full px-[10%] h-[30px] flex justify-between items-center text-sm sm:text-sm font-yekan font-sb text-c-text3 ;
+    
+}
+.downHeader *{
+  @apply  hover:text-c-text1;
+}
 .logo {
     @apply font-bl text-3xl text-c-text1;
 }

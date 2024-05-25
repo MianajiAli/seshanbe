@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* index.css */
 @font-face {
     font-family: 'YekanBakh';
     font-weight: 900;
@@ -98,37 +97,20 @@
     box-shadow: 0 0px 1px #9d00ff99;
 }
 
+
 .btn-round26 {
     @apply w-10 h-10 font-bl text-3xl font-yekan rounded-full opacity-50 hover:opacity-70;
 }
 
+
 .smooth-300 {
     transition: all 0.3s cubic-bezier(.175, .885, .32, 1.275);
-    
+
 }
 
 .card {
-    background: linear-gradient(to right bottom, #181b24,transparent);
-    border: 1px solid #292d39;
-}
-.card-control:hover{
-    background: linear-gradient(to right bottom, #181b24,rgba(166, 0, 255, 0.103));
-    border: 1px solid #292d39;
+    background: linear-gradient(to right bottom, #25212ce6, transparent);
+    border: 1px solid #2c2f37;
 }
 
-.card-control:hover .btn{
-    box-shadow: 0 0px 1px #9d00ff99;
-
-}
-.card-product:hover{
-
-    background: linear-gradient(to right bottom, #181b24,rgba(166, 0, 255, 0.103));
-    border: 1px solid #292d39;
-    transform: -20px;
-
-}
-.card-product:hover .btn{
-    box-shadow: 0 0px 1px #9d00ff99;
-
-}
 

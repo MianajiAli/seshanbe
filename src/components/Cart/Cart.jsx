@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Counter from './../Counter/Counter';
+import Counter from './Counter/Counter';
 
 const Counters = () => {
   const [cart, setCart] = useState([]);

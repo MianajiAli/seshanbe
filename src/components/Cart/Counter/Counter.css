@@ -1,0 +1,24 @@
+.card-control:hover {
+    background: linear-gradient(to right bottom, #1f1e25, rgba(150, 0, 231, 0.2));
+    border: 1px solid #2c2f37;
+}
+
+.card-control:hover .btn {
+    box-shadow: 0 0px 1px #9d00ff99;
+
+}
+
+.btn-control {
+    @apply w-8 h-8 opacity-50  rounded-lg text-center border-c-text2 border-solid border-[1px] flex justify-center items-center ;
+
+}
+
+.btn-control:hover {
+    @apply  text-c-text1 opacity-80 ;
+    transition: all 0.3s linear;
+    filter: drop-shadow(0 0 30px rgb(106, 0, 255));
+}
+
+.btn-control-red:hover {
+    filter: drop-shadow(0 0 30px rgb(255, 0, 0)) !important;
+}
