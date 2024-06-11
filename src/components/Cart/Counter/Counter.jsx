@@ -1,5 +1,5 @@
 import React from 'react';
-import 'Counter.css'
+import './Counter.css'
 const Counter = (props) => {
   const { title, count, id, onRemove, onInc, onDec, color, price,imageUrl } = props;
 
@@ -16,13 +16,13 @@ const Counter = (props) => {
   };
 
   return (
-    <div className="rounded-md p-4 mb-4 flex items-center justify-between  card text-c-text2 ">
+    <div className="rounded-md p-4 mb-4 flex flex-col md:flex-row items-center justify-between  card text-c-text2 ">
       <img
         src={imageUrl}
         alt={title}
-        className="w-[200px] min-h-20 object-contain flex justify-center items-center bg-c-back2 text-c-text2 rounded-md"
+        className="w-[200px] min-h-20  object-contain flex justify-center items-center bg-c-back2 text-c-text2 rounded-md"
       />
-      <div className="flex flex-col gap-3" dir='rtl'>
+      <div className="flex flex-col gap-3 mt-5 md:mt-0 text-center" dir='rtl'>
         <h2 className="text-lg font-bl mb-2 text-c-text1">{title || 'NoTitle'}</h2>
         <div className='flex flex-row gap-1'>
           <div className='flex flex-row gap-1'>
@@ -47,7 +47,7 @@ const Counter = (props) => {
           </button>
           <button
             onClick={handleRemove}
-            className="btn-control bg-red-800 btn-control-red"
+            className="btn-control bg-violet-950 btn-control-red"
           >
             X
           </button>
