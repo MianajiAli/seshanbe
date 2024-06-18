@@ -8,6 +8,7 @@ import Shop from './components/Shop/Shop.jsx';
 import SingleProduct from './components/SingleProduct/SingleProduct';
 import NoPage from './components/NoPage/NoPage.jsx'; // Assuming you have a NoPage component for 404
 import Hero from './components/Hero/Hero.jsx';
+import Menu from './components/Menu/Menu.jsx';
 
 function Layout() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="product/:id" element={<SingleProduct />} />
           <Route path="about-us" element={<Hero />} />
           <Route path="blog" element={<Hero />} />
+          <Route path="menu" element={<Menu />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
