@@ -13,7 +13,7 @@ module.exports = {
         'c-text1': '#f2f2f2', // Text color
         'c-text2': '#a4a4a4', // Text color
         'c-text3': '#4A4A4B', // Text color
-        'c-prim': '#9d00ff', // Primary background 
+        'c-prim': '#d129ff', // Primary background 
         'c-scnd': '#0e0b02', // Secondary background
       },
       fontFamily: {

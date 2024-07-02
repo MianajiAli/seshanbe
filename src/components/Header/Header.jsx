@@ -16,9 +16,10 @@ const Header = () => {
           <Link to="/blog">وبلاگ</Link>
           <Link to="/about-us">درباره ما</Link>
           <Link to="/contact">تماس</Link>
+          <Link to="/menu">رستوران</Link>
         </div>
       </div>
-      <div className='downHeader '>
+      <div className='downHeader'>
         <span className='smooth-300'>ثبت نام | ورود</span>
         <Link className='smooth-300' to="/cart">سبد خرید</Link>
 
